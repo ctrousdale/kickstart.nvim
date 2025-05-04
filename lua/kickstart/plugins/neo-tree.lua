@@ -12,6 +12,7 @@ return {
   cmd = 'Neotree',
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>e', ':Neotree toggle<CR>', desc = 'Neotree toggle', silent = true},
   },
   opts = {
     filesystem = {
@@ -23,3 +24,5 @@ return {
     },
   },
 }
+
+-- vim: ts=2 sts=2 sw=2 et
