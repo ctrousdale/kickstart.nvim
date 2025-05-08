@@ -3,13 +3,14 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  -- Imported in lazy-plugins before everything else:
   --  require("custom.plugins.which-key"),
 
-  require 'custom.plugins.alpha',
+   require 'custom.plugins.alpha',
 
-  require 'custom.plugins.copilot',
+   require 'custom.plugins.copilot',
 
-  require 'custom.plugins.lazygit',
+   require 'custom.plugins.lazygit',
 
-  require 'custom.plugins.leap',
+   require 'custom.plugins.leap',
 }

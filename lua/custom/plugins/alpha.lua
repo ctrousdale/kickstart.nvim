@@ -3,9 +3,10 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   event = "VimEnter",
     config = function()
-        require('alpha').setup(
-            require('alpha.themes.dashboard').config
-        )
+    local alpha = require('alpha')
+    alpha.setup(
+      require('alpha.themes.dashboard').config
+    )
     end,
 }
 

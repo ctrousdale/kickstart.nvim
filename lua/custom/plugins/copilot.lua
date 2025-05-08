@@ -31,5 +31,6 @@ return {
   keys = {
     { '<leader>c', '<nop>', desc = ' Copilot' },
     { '<leader>cc', '<cmd>CopilotChatToggle<CR>', desc = 'Open Chat' },
+    { '<leader>cm', '<cmd>CopilotChatModels<CR>', desc = 'Change model' },
   },
 }
