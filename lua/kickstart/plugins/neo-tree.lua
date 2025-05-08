@@ -1,4 +1,3 @@
-
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 return {
@@ -12,7 +11,7 @@ return {
   cmd = 'Neotree',
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
-    { '<leader>e', ':Neotree toggle<CR>', desc = 'Neotree toggle', silent = true},
+    { '<leader>e', ':Neotree toggle<CR>', desc = 'Neotree toggle', silent = true },
   },
   opts = {
     filesystem = {

@@ -36,11 +36,11 @@ require('lazy').setup({
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
- require 'custom.plugins.which-key',
+  require 'custom.plugins.which-key',
 
---  require('custom.plugins.alpha'),
+  --  require('custom.plugins.alpha'),
 
- require('custom.plugins.init'),
+  require 'custom.plugins.init',
 
   -- NOTE: Plugins can specify dependencies.
   --
@@ -609,11 +609,11 @@ require('lazy').setup({
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
---       require('mini.surround').setup({
---         mappings = {
---          add = 'gs'
---        }
---      })
+      --       require('mini.surround').setup({
+      --         mappings = {
+      --          add = 'gs'
+      --        }
+      --      })
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
@@ -673,8 +673,8 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  require('kickstart.plugins.neo-tree'),
-  require('kickstart.plugins.gitsigns'), -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
