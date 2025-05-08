@@ -1,4 +1,4 @@
--- Neo-tree is a Neovim plugin to browse the file system
+
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 return {
@@ -16,6 +16,7 @@ return {
   },
   opts = {
     filesystem = {
+      follow_current_file = true, -- This will find and focus the file in the active buffer every time
       window = {
         mappings = {
           ['\\'] = 'close_window',

@@ -29,7 +29,7 @@ return {
   end,
 
   keys = {
-    { '<leader>c', '<nop>', desc = 'Copilot' },
+    { '<leader>c', '<nop>', desc = ' Copilot' },
     { '<leader>cc', '<cmd>CopilotChatToggle<CR>', desc = 'Open Chat' },
   },
 }

@@ -6,6 +6,6 @@ return {
   },
   config = function()
     local leap = require 'leap'
-    leap.add_default_mappings()
+    leap.set_default_mappings()
   end,
 }

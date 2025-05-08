@@ -117,6 +117,7 @@ require('custom.plugins.init'),
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
+      vim.keymap.set('n', '<leader>s', '<nop>', { desc = ' [S]earch' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
@@ -608,7 +609,11 @@ require('custom.plugins.init'),
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+--       require('mini.surround').setup({
+--         mappings = {
+--          add = 'gs'
+--        }
+--      })
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
@@ -666,7 +671,7 @@ require('custom.plugins.init'),
   --
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   require('kickstart.plugins.neo-tree'),
   require('kickstart.plugins.gitsigns'), -- adds gitsigns recommend keymaps
