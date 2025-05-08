@@ -3,11 +3,13 @@
 --
 -- See the kickstart.nvim README for more information
 return {
---  require("custom.plugins.which-key"),
+  --  require("custom.plugins.which-key"),
 
-  require("custom.plugins.alpha"),
+  require 'custom.plugins.alpha',
 
-  require('custom.plugins.copilot'),
+  require 'custom.plugins.copilot',
 
-  require("custom.plugins.lazygit"),
+  require 'custom.plugins.lazygit',
+
+  require 'custom.plugins.leap',
 }

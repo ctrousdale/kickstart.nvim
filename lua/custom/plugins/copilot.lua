@@ -1,29 +1,35 @@
 return {
-  "CopilotC-Nvim/CopilotChat.nvim",
+  'CopilotC-Nvim/CopilotChat.nvim',
   dependencies = {
-    { "github/copilot.vim" },
-    { "nvim-lua/plenary.nvim", branch = "master" },
+    { 'github/copilot.vim' },
+    { 'nvim-lua/plenary.nvim', branch = 'master' },
   },
+  event = 'VeryLazy',
   -- build = "make tiktoken", -- Only on MacOS or Linux
   opts = {
     debug = false, -- Enable debug logging
     -- default mappings
     mappings = {
       -- Close the chat
-      close = "<C-c>",
+      close = '<C-c>',
       -- Submit the prompt to Copilot Chat
-      submit = "<CR>",
+      submit = '<CR>',
       -- Use the current selection as the prompt
-      submit_selection = "<C-s>",
+      submit_selection = '<C-s>',
     },
   },
   -- Set up keymaps and commands
   config = function(_, opts)
-    local chat = require("CopilotChat")
+    local chat = require 'CopilotChat'
     chat.setup(opts)
-    
-    vim.api.nvim_create_user_command("CopilotChatOpen", function(args)
-      chat.open({ selection = args.range > 0 })
+
+    vim.api.nvim_create_user_command('CopilotChatOpen', function(args)
+      chat.open { selection = args.range > 0 }
     end, { range = true })
   end,
+
+  keys = {
+    { '<leader>c', '<nop>', desc = 'Copilot' },
+    { '<leader>cc', '<cmd>CopilotChatToggle<CR>', desc = 'Open Chat' },
+  },
 }
