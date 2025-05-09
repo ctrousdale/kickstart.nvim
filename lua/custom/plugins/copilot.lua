@@ -8,6 +8,7 @@ return {
   -- build = "make tiktoken", -- Only on MacOS or Linux
   opts = {
     debug = false, -- Enable debug logging
+    model = 'gpt-4.1', -- Model to use for chat
     -- default mappings
     mappings = {
       -- Close the chat
