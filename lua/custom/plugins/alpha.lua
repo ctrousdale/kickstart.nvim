@@ -4,7 +4,8 @@ return {
   event = 'VimEnter',
   config = function()
     local alpha = require 'alpha'
-    alpha.setup(require('alpha.themes.dashboard').config)
+    local dashboard = require 'alpha.themes.dashboard'
+    alpha.setup(dashboard.config)
   end,
 }
 
