@@ -27,4 +27,10 @@ return {
   require 'custom.plugins.lualine',
 
   require 'custom.plugins.trouble',
+
+  require 'custom.plugins.lint',
+
+  require 'custom.plugins.gitsigns',
+
+  require 'custom.plugins.debug',
 }

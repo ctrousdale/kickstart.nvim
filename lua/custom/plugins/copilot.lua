@@ -28,7 +28,6 @@ return {
       chat.open { selection = args.range > 0 }
     end, { range = true })
   end,
-
   keys = {
     { '<leader>c', '<nop>', desc = ' Copilot' },
     { '<leader>cc', '<cmd>CopilotChatToggle<CR>', desc = 'Open Chat' },

@@ -13,10 +13,10 @@ return {
       -- Set it to the lualine section you want to use
       hl_group = 'lualine_c_normal',
     }
-    table.insert(opts.sections.lualine_c, {
-      symbols.get,
-      cond = symbols.has,
-    })
+    -- table.insert(opts.sections.lualine_c, {
+    -- symbols.get,
+    -- cond = symbols.has,
+    -- })
 
     return {
       theme = 'auto',
