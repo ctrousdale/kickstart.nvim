@@ -25,4 +25,6 @@ return {
   require 'custom.plugins.autopairs',
 
   require 'custom.plugins.lualine',
+
+  require 'custom.plugins.trouble',
 }
