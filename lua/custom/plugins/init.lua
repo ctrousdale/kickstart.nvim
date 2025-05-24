@@ -12,11 +12,15 @@ return {
 
   -- require 'custom.plugins.lazygit',
 
-  require 'custom.plugins.leap',
+  require 'custom.plugins.flash',
 
   require 'custom.plugins.snacks',
 
   -- require 'custom.plugins.minimap',
 
   require 'custom.plugins.lsp-colors',
+
+  require 'custom.plugins.bufferline',
+
+  require 'custom.plugins.autopairs',
 }
