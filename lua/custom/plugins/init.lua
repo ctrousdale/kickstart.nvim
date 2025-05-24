@@ -23,4 +23,6 @@ return {
   require 'custom.plugins.bufferline',
 
   require 'custom.plugins.autopairs',
+
+  require 'custom.plugins.lualine',
 }
