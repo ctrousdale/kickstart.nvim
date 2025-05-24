@@ -2,8 +2,15 @@ return {
   'akinsho/bufferline.nvim',
   version = '*',
   dependencies = 'nvim-tree/nvim-web-devicons',
-  config = function()
-    local bufferline = require 'bufferline'
-    bufferline.setup()
-  end,
+  opts = {
+    options = {
+      offsets = {
+        filetype = 'snacks_layout_box',
+        text = '󰙅  File Explorer',
+        -- highlight = 'Directory',
+        -- text_align = 'true',
+        separator = true,
+      },
+    },
+  },
 }
