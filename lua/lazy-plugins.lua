@@ -374,7 +374,9 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
-        --
+
+        bashls = {},
+        tailwindcss = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -413,7 +415,7 @@ require('lazy').setup({
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_installation = false,
+        automatic_installation = true,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
@@ -460,11 +462,15 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        javascript = { 'prettierd', 'prettier' },
+        javascriptreact = { 'prettierd', 'prettier' },
+        typescript = { 'prettierd', 'prettier' },
+        typescriptreact = { 'prettierd', 'prettier' },
+        json = { 'prettierd', 'prettier' },
+        jsonc = { 'prettierd', 'prettier' },
+        html = { 'prettierd', 'prettier' },
+        css = { 'prettierd', 'prettier' },
+        sh = { 'beautysh' },
       },
     },
   },
@@ -550,6 +556,15 @@ require('lazy').setup({
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
         },
+      },
+
+      cmdline = {
+        -- Disable completion for shell commands due to poor performance on WSL2
+        enabled = true,
+
+        -- sources = {
+        --   default = { 'cmdline' },
+        -- },
       },
 
       snippets = { preset = 'luasnip' },

@@ -66,4 +66,11 @@ vim.opt.scrolloff = 15
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
+-- Disable commandline command autocomplete due to poor performance on WSL2
+-- vim.api.nvim_create_autocmd('CmdlineEnter', {
+--   pattern = '!',
+--   callback = function()
+--     vim.opt_local.wildignore:append { '*' }
+--   end,
+-- })
 -- vim: ts=2 sts=2 sw=2 et

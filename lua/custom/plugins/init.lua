@@ -33,4 +33,6 @@ return {
   require 'custom.plugins.gitsigns',
 
   require 'custom.plugins.debug',
+
+  require 'custom.plugins.autotag',
 }
