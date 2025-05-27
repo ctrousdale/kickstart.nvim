@@ -35,4 +35,18 @@ return {
   require 'custom.plugins.debug',
 
   require 'custom.plugins.autotag',
+
+  require 'custom.plugins.telescope',
+
+  require 'custom.plugins.lazydev',
+
+  require 'custom.plugins.nvim-lspconfig',
+
+  require 'custom.plugins.conform',
+
+  require 'custom.plugins.blink',
+
+  require 'custom.plugins.todo-comments',
+
+  require 'custom.plugins.mini',
 }
